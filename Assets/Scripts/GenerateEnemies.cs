@@ -20,11 +20,11 @@ public class GenerateEnemies : MonoBehaviour
     {
         while (enemyCount < 50)
         {
-            xPos = Random.Range(1, -128);
-            zPos = Random.Range(1, 371);
+            xPos = Random.Range(1, -23);
+            zPos = Random.Range(1, 150);
             Instantiate(theEnemy, new Vector3(xPos, 6, zPos), Quaternion.identity);
             yield return new WaitForSeconds(0.1f);
-            enemyCount += 1;
+            enemyCount += 2;
 
         }
     }

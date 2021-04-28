@@ -7,7 +7,7 @@ public class PickUp : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player") { 
-        PlayerManager.health +=25;
+        //playerHealth. +=5;
         Destroy(this.gameObject);
         }
     }
