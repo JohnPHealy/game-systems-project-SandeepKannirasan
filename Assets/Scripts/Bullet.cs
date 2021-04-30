@@ -90,10 +90,10 @@ public class Bullet : MonoBehaviour
     }
 
 
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, explosionRange);
-    }
+   // private void OnDrawGizmosSelected()
+   // {
+     //   Gizmos.color = Color.red;
+     //   Gizmos.DrawWireSphere(transform.position, explosionRange);
+  //  }
 
 }
