@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform cam;
     [SerializeField] private float gravity = 10;
     [SerializeField] private float jumpAmount = 3f;
-    [SerializeField] private float runSpeed = 8f;
+    //[SerializeField] private float runSpeed = 8f;
     [SerializeField] private Animator myAnim;
 
 
@@ -34,7 +34,6 @@ public class PlayerMovement : MonoBehaviour
     {
         myController = GetComponent<CharacterController>();
 
-
         horizontalInput = 1;
 
         //face Forward
@@ -50,12 +49,9 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    // Update is called once per frame
-    void Update()
-    {// Vertical Velocity
-     //myController.Move(velocity * Time.deltaTime);
 
-        //myController.Move(new Vector3(horizontalInput * runSpeed, 0, 0) * Time.deltaTime);
+    void Update()
+    {
 
       
 

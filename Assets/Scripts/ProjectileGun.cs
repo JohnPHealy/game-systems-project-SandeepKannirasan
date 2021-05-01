@@ -49,7 +49,7 @@ public class ProjectileGun : MonoBehaviour
     {
 
         //setdisplay
-        if (ammunitionDisplay != null) ;
+      //  if (ammunitionDisplay != null) ;
            // ammunitionDisplay.SetText(bulletsLeft / bulletsPerTap + "/" + magazineSize / bulletsPerTap);
     }
 
@@ -63,12 +63,7 @@ public void shoot(InputAction.CallbackContext context)
             shooting = true;
         if (allowButtonHold && context.started)
             shooting = true;
-       // if (allowButtonHold) shooting = context.performed; //Input.GetKey(KeyCode.Mouse0);
-        //else shooting = context.started; //Input.GetKeyDown(KeyCode.Mouse0);
 
-        //reloading
-        //if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading) Reload();
-        //if (readyToShoot && shooting && !reloading && bulletsLeft <= 0) Reload();
    
 
     //shooting
@@ -112,9 +107,7 @@ public void shoot(InputAction.CallbackContext context)
         //rotatebullet to shoot direction
         currentBullet.transform.forward = directionWithoutSpread.normalized;
 
-        //Add force to bullet
-        //currentBullet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * shootForce, ForceMode.Impulse);
-        // currentBullet.GetComponent<Rigidbody>().AddForce(fpsCam.transform.up * upwardForce, ForceMode.Impulse);
+
 
         currentBullet.GetComponent<Rigidbody>().AddForce(transform.forward * shootForce,ForceMode.Impulse);
 
@@ -152,7 +145,7 @@ public void shoot(InputAction.CallbackContext context)
         reloading = true;
         Invoke("ReloadFinished", reloadTime);
     }
-
+   
     private void ReloadFinished()
     {
         bulletsLeft = magazineSize;

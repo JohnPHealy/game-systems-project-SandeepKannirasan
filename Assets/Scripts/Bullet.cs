@@ -49,11 +49,7 @@ public class Bullet : MonoBehaviour
         //check for enemies
         Collider[] enemies = Physics.OverlapSphere(transform.position, explosionRange, whatIsEnemies);
         for (int i = 0; i < enemies.Length; i++)
-        {
-            //example
-            ////enemies[i].GetComponent<ShootingAi>().TakeDamage(explosionDamage);
-        }
-
+       
         Invoke("Delay", 0.05f);
 
     }
@@ -89,11 +85,5 @@ public class Bullet : MonoBehaviour
         rb.useGravity = useGravity;
     }
 
-
-   // private void OnDrawGizmosSelected()
-   // {
-     //   Gizmos.color = Color.red;
-     //   Gizmos.DrawWireSphere(transform.position, explosionRange);
-  //  }
 
 }
