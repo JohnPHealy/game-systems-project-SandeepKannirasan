@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartGame : MonoBehaviour
+public class Level3start : MonoBehaviour
 {
-public void playGame()
+    public void level3()
     {
-        SceneManager.LoadScene("Level1start");
+        SceneManager.LoadScene("Level3");
     }
 }

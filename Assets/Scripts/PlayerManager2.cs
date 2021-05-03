@@ -5,55 +5,50 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
-
-public class PlayerManager : MonoBehaviour
+public class PlayerManager2 : MonoBehaviour
 {
     public static int health = 100;
     public GameObject player;
     public Slider healthBar;
- 
+
 
     // Start is called before the first frame update
     void Start()
     {
-       InvokeRepeating("ReduceHealth", 1, 1);
-  
+        InvokeRepeating("ReduceHealth", 1, 1);
     }
 
- 
+
 
     void ReduceHealth()
     {
-       health = health -5;
+        health = health - 5;
         healthBar.value = health;
 
 
 
         if (health <= 0)
         {
-            Debug.Log("Death");
-           // Scene scene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene("Level1start");
+            SceneManager.LoadScene("IntroScene");
 
         }
     }
 
 
 
-    public void PauseGame()
-   {
-        Time.timeScale = 5f;
+    // public void PauseGame()
+    //{
+    //     Time.timeScale = 5f;
 
-    }
+    // }
 
 
-    public void ReLoadLevel()
-   {
-       
- //Scene scene = SceneManager.GetActiveScene();
-   SceneManager.LoadScene("Level1");
+    //public void ReLoadLevel()
+    //{
+    //   Scene scene = SceneManager.GetActiveScene();
+    //   SceneManager.LoadScene(scene.name);
 
-  }
+    // }
 
 
 
