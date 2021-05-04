@@ -16,7 +16,8 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       InvokeRepeating("ReduceHealth", 1, 1);
+        
+        InvokeRepeating("ReduceHealth", 1, 1);
   
     }
 
@@ -24,36 +25,42 @@ public class PlayerManager : MonoBehaviour
 
     void ReduceHealth()
     {
-       health = health -5;
+       health = health -2;
         healthBar.value = health;
 
 
 
         if (health <= 0)
         {
-            Debug.Log("Death");
-           // Scene scene = SceneManager.GetActiveScene();
+
+            // Scene scene = SceneManager.GetActiveScene();
+            
             SceneManager.LoadScene("Level1start");
+           
+            healthBar.value = health;
+            health = health +=100;
+
+
 
         }
     }
 
 
 
-    public void PauseGame()
-   {
-        Time.timeScale = 5f;
+  //  public void PauseGame()
+  // {
+  //      Time.timeScale = 5f;
 
-    }
+  //  }
 
 
-    public void ReLoadLevel()
-   {
-       
+ //   public void ReLoadLevel()
+  // {
+        
  //Scene scene = SceneManager.GetActiveScene();
-   SceneManager.LoadScene("Level1");
+   //SceneManager.LoadScene("Level1");
 
-  }
+  //}
 
 
 

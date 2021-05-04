@@ -7,6 +7,6 @@ public class Story : MonoBehaviour
 {
     public void Game()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +4);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +5);
     }
 }

@@ -29,7 +29,9 @@ public class PlayerManager3 : MonoBehaviour
 
         if (health <= 0)
         {
-            //SceneManager.LoadScene("Level3start");
+            SceneManager.LoadScene("Level3start");
+            healthBar.value = health;
+            health = health += 100;
 
         }
     }

@@ -22,14 +22,16 @@ public class PlayerManager2 : MonoBehaviour
 
     void ReduceHealth()
     {
-        health = health - 5;
+        health = health - 2;
         healthBar.value = health;
 
 
 
         if (health <= 0)
         {
-            SceneManager.LoadScene("IntroScene");
+            SceneManager.LoadScene("Level2start");
+            healthBar.value = health;
+            health = health += 100;
 
         }
     }
