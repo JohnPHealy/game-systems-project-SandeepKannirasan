@@ -13,6 +13,7 @@ public class PlayerManager2 : MonoBehaviour
 
 
     // Start is called before the first frame update
+    // repeat the reduction of health from start
     void Start()
     {
         InvokeRepeating("ReduceHealth", 1, 1);
@@ -26,7 +27,7 @@ public class PlayerManager2 : MonoBehaviour
         healthBar.value = health;
 
 
-
+        //reload scene (level2) when health is 0 and again keep the bar unit back to 100
         if (health <= 0)
         {
             SceneManager.LoadScene("Level2start");
@@ -35,25 +36,6 @@ public class PlayerManager2 : MonoBehaviour
 
         }
     }
-
-
-
-    // public void PauseGame()
-    //{
-    //     Time.timeScale = 5f;
-
-    // }
-
-
-    //public void ReLoadLevel()
-    //{
-    //   Scene scene = SceneManager.GetActiveScene();
-    //   SceneManager.LoadScene(scene.name);
-
-    // }
-
-
-
 
 
 }

@@ -16,6 +16,7 @@ public class BulletScript : MonoBehaviour
         
     }
 
+    //When the bullet collides witht he enemy the enemy is destroyed (Only the virus)
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.transform.tag == "Enemy")

@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class PickUp3 : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    //When player collects the bonus(Medication), the timeline increases by +10 to complete the game
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (other.gameObject.tag == "Player")
+        {
+            PlayerManager3.health += 10;
+            Destroy(this.gameObject);
+        }
     }
 }

@@ -6,8 +6,9 @@ public class PickUp : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
+        //When player collects the bonus(Medication), the timeline increases by +10 to complete the game
         if (other.gameObject.tag == "Player") { 
-        PlayerManager.health +=25;
+        PlayerManager.health +=10;
         Destroy(this.gameObject);
         }
     }

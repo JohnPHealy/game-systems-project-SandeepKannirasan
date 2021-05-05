@@ -24,14 +24,15 @@ public class playerHealth : MonoBehaviour
     void Update()
     {
       
-        text.text = "Health :" +health;
+        text.text = "HEALTH :" +health;
     }
-
+    //reduce on collision with the enemy
     void OnCollisionEnter(Collision obj)
     {
         if (obj.gameObject.tag == "Enemy")
             health = health -10;
 
+        //load the scene again when the health becomes 0
         if(health <= 0)
         {
             Scene scene = SceneManager.GetActiveScene();

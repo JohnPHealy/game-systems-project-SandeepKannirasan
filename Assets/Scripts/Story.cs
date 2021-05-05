@@ -7,6 +7,7 @@ public class Story : MonoBehaviour
 {
     public void Game()
     {
+        //load the story screen
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +5);
     }
 }

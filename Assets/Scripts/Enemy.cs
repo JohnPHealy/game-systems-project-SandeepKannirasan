@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    { //stopping distance from the the "Player"
         if (Vector3.Distance(transform.position, player.position) > stoppingDistance)
         {
             transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
@@ -37,15 +37,14 @@ public class Enemy : MonoBehaviour
         {
             transform.position = this.transform.position;
         }
-
+        //retreat when the stopping distance is reached 
         else if (Vector3.Distance(transform.position, player.position) < retreatDistance)
         {
             transform.position = Vector3.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
         }
-
+        //this script was written if the enemy had shooting power
         if (timeBtwShots <= 0)
         {
-            //Instantiate(projectile, transform.position, Quaternion.identity);
             timeBtwShots = startTimeBtwShots;
         }
 

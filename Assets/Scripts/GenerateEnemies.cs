@@ -13,17 +13,20 @@ public class GenerateEnemies : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //generate enemies
         StartCoroutine(EnemyDrop());
     }
     //
     IEnumerator EnemyDrop()
     {
-        while (enemyCount < 50)
+        //number of enemies and the position within which they have to be generated.
+        //the enemy is spread across the environment
+        while (enemyCount < 100)
         {
-            xPos = Random.Range(1, -23);
-            zPos = Random.Range(1, 150);
+            xPos = Random.Range(1, -38);
+            zPos = Random.Range(1, 287);
             Instantiate(theEnemy, new Vector3(xPos, 6, zPos), Quaternion.identity);
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.2f);
             enemyCount += 2;
 
         }
