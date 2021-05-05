@@ -25,7 +25,7 @@ public class PlayerManager : MonoBehaviour
 
     void ReduceHealth()
     {
-       health = health -2;
+       health = health -4;
         healthBar.value = health;
 
 
