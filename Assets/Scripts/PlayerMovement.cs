@@ -14,7 +14,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform cam;
     [SerializeField] private float gravity = 10;
     [SerializeField] private float jumpAmount = 3f;
-    //[SerializeField] private float runSpeed = 8f;
     [SerializeField] private Animator myAnim;
 
 
@@ -55,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
 
       
 
-
+        //control of player character using mouse movement and the scene view
         var planerMovementSpeed = new Vector3(myController.velocity.x, myController.velocity.z).magnitude;
         myAnim.SetFloat("speed", planerMovementSpeed);
 
@@ -71,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
         float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle,ref rotateVelocity, rotationSmoothing);
 
 
-
+        //movement speed of the view along with the player rotation
         transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
         Vector3 movDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
@@ -81,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
 
     
     }
-
+    // input systems for the movement
     public void Move(InputAction.CallbackContext context)
     {
         var moveInput = context.ReadValue<Vector2>();

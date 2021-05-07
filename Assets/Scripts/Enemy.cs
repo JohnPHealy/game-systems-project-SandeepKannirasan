@@ -47,7 +47,7 @@ public class Enemy : MonoBehaviour
         {
             timeBtwShots = startTimeBtwShots;
         }
-
+        //time delay between recurring bullets
         else
         {
             timeBtwShots -= Time.deltaTime;

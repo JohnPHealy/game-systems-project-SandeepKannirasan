@@ -16,7 +16,7 @@ public class Goal2 : MonoBehaviour
     {
 
     }
-
+    //collide and exit the level to move to another level
     void OnCollisionEnter(Collision gameObjectInformation)
     {
         if (gameObjectInformation.gameObject.name == "Player")

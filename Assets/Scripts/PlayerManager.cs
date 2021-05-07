@@ -16,12 +16,13 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //when the game starts the time countdown starts 
         InvokeRepeating("ReduceHealth", 1, 1);
   
     }
 
- 
+
+    //Reduce time gradually
 
     void ReduceHealth()
     {
@@ -29,7 +30,7 @@ public class PlayerManager : MonoBehaviour
         healthBar.value = health;
 
 
-
+        //Destroy/repspawn level when the time turns zero and load the scene again
         if (health <= 0)
         {
 
@@ -44,26 +45,6 @@ public class PlayerManager : MonoBehaviour
 
         }
     }
-
-
-
-  //  public void PauseGame()
-  // {
-  //      Time.timeScale = 5f;
-
-  //  }
-
-
- //   public void ReLoadLevel()
-  // {
-        
- //Scene scene = SceneManager.GetActiveScene();
-   //SceneManager.LoadScene("Level1");
-
-  //}
-
-
-
 
 
 }
